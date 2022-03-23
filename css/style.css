@@ -1,0 +1,23 @@
+/* Colors for project
+#CACAAA
+#EEC584
+#C8AB83
+#55868C
+#7F636E */
+
+header {
+    height: 300px;
+}
+
+.banner {
+    background-image: url("../images/luisa-brimble-HvXEbkcXjSk-unsplash (2).jpg");
+    background-repeat:no-repeat;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.text-head {
+    color: #55868C
+}
+

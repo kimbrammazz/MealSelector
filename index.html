@@ -25,27 +25,75 @@
 
     <!-- Meal selection area -->
     <div class="container pt-2">
-      <div class="row justify-content-evenly mt-2">
+      <div class="row my-2">
         <div class="col d-flex justify-content-center">
           <button type="button" class="btn btn-own rounded-pill" id="chooseBtn">Choose my meal</button>
         </div>
-        <div>
-        <section><p>Do not repeat for #input days</p></section>
-        <section id="mealSelection">
-          <ul>
-          </ul>
-        </section> 
-      </div>
-      </div>
-    </div>
-    
-    <!-- Meal output area-->
-    <!-- Print ingredients list-->
+        </div>
+        <div class="row">
+          <div class="col d-flex justify-content-center">
+          <p>Do not repeat for <input type="number" class="repeatDays"></input> days</p>
+          </div>
+        </div>
+        <!-- Meal output area-->
+        <div class ="row">
+          <div class="col d-flex justify-content-center">
+            <section id="mealSelection">
+              <ul>
+              </ul>
+            </section> 
+          </div>
+        </div>
+      
 
+      <!-- Print ingredients list-->
+      
+    
+    
     <!-- Add meal to list area -->
-    <!-- Output meals in list -->
+    <div class="row justify-content-evenly mt-2">
+      <div class="col d-flex justify-content-center">
+        <!-- Button trigger modal -->
+          <button type="button" class="btn btn-own rounded-pill" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add meal to list
+          </button>
 
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Meal to add</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-own">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>  
     
+    <!-- Output meals in list -->
+    <div class="row my-2">
+      <div class="col d-flex justify-content-center">
+        <p><span id="displayList" class="clickable">Show</span> meals in list</p>
+      </div>
+      </div>
+      <div class ="row">
+        <div class="col d-flex justify-content-center">
+          <section id="mealsList">
+            <ul class="list-unstyled">
+            </ul>
+          </section> 
+        </div>
+      </div>
+  </div>
     
     <script src="./js/index.js"></script>
     <!-- Option 1: Bootstrap Bundle with Popper -->

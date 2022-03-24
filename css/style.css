@@ -26,3 +26,11 @@ header {
     color: white;
 }
 
+.repeatDays {
+    width: 50px
+}
+
+.clickable {
+    color: #EEC584
+}
+

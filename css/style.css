@@ -31,6 +31,7 @@ header {
 }
 
 .clickable {
-    color: #EEC584
+    color: #7F636E;
+    cursor: pointer
 }
 

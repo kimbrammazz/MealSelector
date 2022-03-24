@@ -32,10 +32,11 @@ let mealsList = document.querySelector("#mealsList")
 //function
 function display_list() {
     console.log("clicked link");
-    for(let i = 0; i < dinner_meals.length; i++) {
-        console.log(dinner_meals[i])
+    alphabetical_List = dinner_meals.sort();
+    for(let i = 0; i < alphabetical_List.length; i++) {
+        console.log(alphabetical_List[i])
         let li = document.createElement("li");
-        li.innerHTML = dinner_meals[i];
+        li.innerHTML = alphabetical_List[i];
         mealsList.querySelector("ul").appendChild(li);
     }
 }

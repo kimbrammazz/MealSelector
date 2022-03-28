@@ -10,24 +10,52 @@ var dinner_meals = ["Mince Curry", "Chicken parma", "Wraps", "Thai Curry", "Bolo
 //Choose an entity
 let chooseBtn = document.querySelector("#chooseBtn");
 let section = document.querySelector("#mealSelection")
+let repeatDays = document.querySelector("#repeatDays")
 
 // function
-function show_meal() {
+function choose_meal() {
     console.log("clicked button")
-    let meal = dinner_meals[Math.floor(Math.random()*dinner_meals.length)];
-    console.log(meal)
-    let li = document.createElement("li");
-    li.innerHTML = meal;
-    section.querySelector("ul").appendChild(li);
-}
+    // value taken from user
+    const n = repeatDays.value;
+    //Initial empty array
+    let random = [];
+    //Null check
+    if (n == 0) {
+        console.log(null)
+    }
+    do {
+        // Generating random number
+        let meal = dinner_meals[Math.floor(Math.random()*dinner_meals.length)];
+        console.log(meal)
+      
+        // Pushing into the array only 
+        // if the array does not contain it
+        if (!random.includes(meal)) {
+            random.push(meal);
+        }
+      
+    } while (random.length < n);
+
+    // let meal = dinner_meals[Math.floor(Math.random()*dinner_meals.length)];
+    // console.log(meal)
+    // let li = document.createElement("li");
+    // li.innerHTML = meal;
+    // section.querySelector("ul").appendChild(li);
+    for(let i = 0; i < random.length; i++) {
+        console.log(random[i])
+        let li = document.createElement("li");
+        li.innerHTML = random[i];
+        section.querySelector("ul").appendChild(li);
+};
+};
 
 //call the event
-chooseBtn.addEventListener("click", show_meal)
+chooseBtn.addEventListener("click", choose_meal);
 
 //functions to display all meals in list
 //choose entity
-let showList = document.querySelector("#displayList")
-let mealsList = document.querySelector("#mealsList")
+let showList = document.querySelector("#displayList");
+let mealsList = document.querySelector("#mealsList");
 
 //function
 function display_list() {
@@ -42,4 +70,4 @@ function display_list() {
 }
 
 //call the event
-showList.addEventListener("click", display_list)
+showList.addEventListener("click", display_list);

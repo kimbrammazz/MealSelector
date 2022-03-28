@@ -24,7 +24,7 @@ function choose_meal() {
         console.log(null)
     }
     do {
-        // Generating random number
+        // Generating random meal
         let meal = dinner_meals[Math.floor(Math.random()*dinner_meals.length)];
         console.log(meal)
       
@@ -35,12 +35,7 @@ function choose_meal() {
         }
       
     } while (random.length < n);
-
-    // let meal = dinner_meals[Math.floor(Math.random()*dinner_meals.length)];
-    // console.log(meal)
-    // let li = document.createElement("li");
-    // li.innerHTML = meal;
-    // section.querySelector("ul").appendChild(li);
+    
     for(let i = 0; i < random.length; i++) {
         console.log(random[i])
         let li = document.createElement("li");
@@ -51,6 +46,22 @@ function choose_meal() {
 
 //call the event
 chooseBtn.addEventListener("click", choose_meal);
+
+//function to add meal to list
+//choose entity
+let saveMeal = document.querySelector("#saveNewMeal")
+let addMeal = document.querySelector("#addMeal")
+
+//function
+function add_meal_toList(){
+    console.log("in function")
+    let mealToAdd = addMeal.value;
+    console.log(mealToAdd)
+    return dinner_meals.push(mealToAdd)
+}
+
+//call the event
+saveMeal.addEventListener("click", add_meal_toList)
 
 //functions to display all meals in list
 //choose entity

@@ -32,7 +32,7 @@
         </div>
         <div class="row">
           <div class="col d-flex justify-content-center">
-          <p>Do not repeat for <input type="number" id= "repeatDays" class="repeatDays"></input> days</p>
+          <p>Do not repeat for <input type="number" min="1" id= "repeatDays" class="repeatDays"></input> days</p>
           </div>
         </div>
         <!-- Meal output area-->
@@ -67,11 +67,12 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  ...
+                  <label for="mealName">Name of meal:</label>
+                  <input type="text" id="addMeal" name="mealName">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-own">Save changes</button>
+                  <button type="button" id="saveNewMeal" class="btn btn-own">Save changes</button>
                 </div>
               </div>
             </div>

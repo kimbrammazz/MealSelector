@@ -5,19 +5,12 @@
 #55868C
 #7F636E */
 
-header {
-    height: 300px;
-}
-
-.banner {
-    background-image: url("../images/luisa-brimble-HvXEbkcXjSk-unsplash (2).jpg");
-    background-repeat:no-repeat;
+/* header {
     width: 100%;
-    height:100%;
-    object-fit: cover;
-}
+    height: auto;
+} */
 
-.text-head {
+h1 {
     color: #55868C
 }
 
